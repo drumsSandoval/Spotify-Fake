@@ -1,0 +1,25 @@
+<!--
+  Generated template for the ArtistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title class="app-themex" ><p ion-text color="light">{{artist}}</p></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="app-themex">
+  <ion-card >
+    <img [src]="img"/>
+    <ion-card-content padding>
+      <ion-card-title color="light">
+        {{artist}}
+       </ion-card-title>
+       <div [innerHTML]="biography">
+
+       </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

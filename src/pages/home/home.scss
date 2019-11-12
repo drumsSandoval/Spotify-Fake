@@ -1,3 +1,24 @@
 page-home {
 
 }
+
+
+.app-theme{
+  background-color: #191414;
+  ion-card{
+    ion-item{
+      padding: 30px 20px;
+
+    }
+    ion-thumbnail{
+      img {
+        width: 15rem;
+        height: 15rem;
+      }
+    }
+
+  }
+}
+
+
+

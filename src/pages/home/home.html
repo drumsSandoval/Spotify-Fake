@@ -1,14 +1,25 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
+<ion-header >
+  <ion-navbar >
+    <ion-title  class="app-theme">
+
+      <p ion-text color="light">Mis Discos</p>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content  class="app-theme">
+  <ion-card>
+    <ion-item  *ngFor="let disc of discs" class="app-theme" >
+      <ion-thumbnail item-start>
+        <img (click)="clickFoto(disc.name,disc.img)" [src]="disc.img">
+      </ion-thumbnail>
+      <h2 (click)="clickName(disc.artist,disc.biography,disc.imgBand)" style="color: aliceblue;">{{disc.artist}}</h2>
+      <p>{{disc.year}}</p>
+      <ion-col (click)="clickReview(disc.reviews)" *ngFor="let number of disc.stars">
+        <ion-icon color='light' name="star"></ion-icon>
+      </ion-col>
+      <p> <ion-icon color='light' name="play-outline" style="zoom: 3.0;" (click)=clickPlay(disc.songs,disc.name,disc.year,disc.img)>
+      </ion-icon></p>
+    </ion-item>
+    </ion-card>
 </ion-content>
